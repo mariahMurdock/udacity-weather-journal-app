@@ -6,18 +6,11 @@ let d = new Date();
 let newDate = d.getMonth()+'.'+ d.getDate()+'.'+ d.getFullYear();
 
 // Call GET API
-
-
 const fetch = require("node-fetch");
 
 document.getElementById('generate').addEventListener('click', performAction);
 
-
 function performAction() {
-
-
-
-
 
   const apiKey = 'ae716aaa5bdb92fb1647d30092d53fee';
 
@@ -25,7 +18,7 @@ function performAction() {
 
   const url = 'http://api.openweathermap.org/data/2.5/weather?q=' + country + '&appid=' + apiKey;
 
-  const EnterWeather = document.getElementById('feelings').value;
+  const EnterWeather = document.getElementById('zip').value;
 
   const getCallApi = async (country) => {
 
