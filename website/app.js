@@ -1,17 +1,9 @@
-// // Call GET API
-const fetch = require("node-fetch");
-const getCallApi = async (country) => {
-  const apiKey = 'ae716aaa5bdb92fb1647d30092d53fee';
-  const url = 'http://api.openweathermap.org/data/2.5/weather?q=' + country + '&appid=' + apiKey;
-  const response = await fetch(url, {
-    method: 'GET'
-  });
-  console.log(await response.json());
-};
 
-getCallApi('Portland');
+/* Global Variables */
 
-
+// Create a new date instance dynamically with JS
+let d = new Date();
+let newDate = d.getMonth()+'.'+ d.getDate()+'.'+ d.getFullYear();
 
 // Call GET API
 
@@ -22,6 +14,10 @@ document.getElementById('generate').addEventListener('click', performAction);
 
 
 function performAction() {
+
+
+
+
 
   const apiKey = 'ae716aaa5bdb92fb1647d30092d53fee';
 
@@ -45,13 +41,3 @@ function performAction() {
 };
 
 getCallApi('Portland');
-
-console.log('working');
-
-function addDynamicContent() {
-  const entryHolder = document.getElementById('entryHolder');
-  const addToEntryHolder = document.createElement('div');
-  const addDateDiv = entryHolder.appendChild(addToEntryHolder);
-}
-
-}
