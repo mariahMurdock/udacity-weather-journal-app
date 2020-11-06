@@ -39,3 +39,19 @@ function listening() {
     console.log('server running');
     console.log('running on local host: {$port}');
 }
+
+// GET Route
+app.get('/retrieve', getData);
+
+function getData(request, response) {
+    response.send(projectData);
+}
+
+// POST Route
+app.post('/add', postData);
+
+function postData(request, response) {
+    projectData = request.body;
+    response.send({ message: "Post received" })
+    console.log(projectData)
+}
