@@ -1,6 +1,9 @@
 
 /* Global Variables */
 
+// The URL root if user searches by zip code
+
+
 // Create a new date instance dynamically with JS
 let d = new Date();
 let newDate = d.getMonth()+'.'+ d.getDate()+'.'+ d.getFullYear();
@@ -14,7 +17,7 @@ function performAction() {
 
   const apiKey = 'ae716aaa5bdb92fb1647d30092d53fee';
 
-  // const country =
+  const country =
 
   const url = 'http://api.openweathermap.org/data/2.5/weather?q=' + country + '&appid=' + apiKey;
 

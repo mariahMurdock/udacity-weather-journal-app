@@ -1,6 +1,8 @@
 // Set up empty JS object to act as endpoint for all routes
 
-const projectData = {};
+let projectData = {
+  "name": "Fuck, this is bullshit"
+};
 
 // Node and Express Enviorments:
 
