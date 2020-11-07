@@ -1,12 +1,22 @@
 
 /* Global Variables */
 
-// The URL root if user searches by zip code
-const url = 'http://api.openweathermap.org/data/2.5/weather?q=' + zip + '&appid=' + apiKey;
 // The URL for api key
 const apiKey = 'ae716aaa5bdb92fb1647d30092d53fee';
+
+// The URL root if user searches by zip code
+const url = 'http://api.openweathermap.org/data/2.5/weather?q=' + zip + '&appid=' + apiKey;
+
+// The URL if user searches by city
+const cityUrl = 'http://api.openweathermap.org/data/2.5/weather?q=' + city + '&appid=' + apiKey;
+
+
+
+
 // Grab users zip code input
-const zip = document.getElementById('zip').value;
+let zip = document.getElementById('zip').value;
+// Grab users city input
+let zip = document.getElementById('city').value;
 
 
 
@@ -18,13 +28,11 @@ document.getElementById('generate').addEventListener('click', performAction);
 
 function performAction() {
 
-  const apiKey = 'ae716aaa5bdb92fb1647d30092d53fee';
+  // const apiKey = 'ae716aaa5bdb92fb1647d30092d53fee';
+// const url = 'http://api.openweathermap.org/data/2.5/weather?q=' + city + '&appid=' + apiKey;
 
-  const country =
-
-  const url = 'http://api.openweathermap.org/data/2.5/weather?q=' + country + '&appid=' + apiKey;
-
-  const EnterWeather = document.getElementById('zip').value;
+// NOT RELEVANT??????:
+  // const EnterWeather = document.getElementById('zip').value;
 
   const getCallApi = async (country) => {
 
@@ -39,7 +47,7 @@ function performAction() {
   };
 };
 
-getCallApi('Portland');
+// getCallApi('Portland');
 
 
 // Create a new date instance dynamically with JS
